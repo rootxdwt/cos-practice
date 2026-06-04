@@ -18,11 +18,13 @@ const char *Faculty::getID() {
     return this->id;
 }
 
-// Please implement setter and getter functions
+void Faculty::setID(const char *id) {
+    this->id = id;
+}
 
 void Faculty::print() {
     if (!this->age)
         cout << " Faculty) name: " << this->name << ", age: unknown, id: " << this->id << endl;
     else
-        cout << "Faculty) name: " << this->name << ", age: << this->age << ", id: " << this->id << endl;
+        cout << "Faculty) name: " << this->name << ", age: " << this->age << ", id: " << this->id << endl;
 }

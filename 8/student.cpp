@@ -1,6 +1,6 @@
 #include <iostream>
 #include "student.h"
-using namespace std;
+
 Student::Student(const char *name, int age, const char *id)
     : Human(name, age) {
     cout << "Student constructor" << endl;
@@ -13,7 +13,14 @@ Student::Student(const char *name, int age)
     this->setStudentID(NULL);
 }
 
-// Please implement getStudentID() and setStudentID()
+
+const char *Student::getStudentID() {
+    return this->id;
+}
+
+void Student::setStudentID(const char *id) {
+    this->id = id;
+}
 
 void Student::print() {
     if (!this->id)
